@@ -90,6 +90,10 @@ counter = function() {
       var output = "<div class='card-panel hoverable'>" + "<img src=" + imagelist[j] + "/></div>";
       $('#gifs').html(output);
       j+=1;
+      if(j === imagelist.length)
+      {
+        j = 0;
+      }
     }
 
     $('#wordCount').html(wordCount);
