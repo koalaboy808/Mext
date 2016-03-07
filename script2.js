@@ -47,30 +47,8 @@ $.ajax({
     }
   });
   
-    $.ajax({
-          url: "http://infinigag.k3min.eu/wtf/hot",
-          success: function(result4) {
-            console.log(result4);
-            console.log(result4.data[0].images.normal);
-            for(i=0;i < result4.data.length; i++)
-            {
-              imagelist.push(result4.data[i].images.normal);
-            }
-          }
-        });
-    $.ajax({
-              url: "http://infinigag.k3min.eu/wtf/fresh",
-              success: function(result5) {
-                console.log(result5);
-                console.log(result5.data[0].images.normal);
-                for(i=0;i < result5.data.length; i++)
-                {
-                  imagelist.push(result5.data[i].images.normal);
-                }
-              }
-            });
             $.ajax({
-                      url: "http://infinigag.k3min.eu/funny/fresh",
+                      url: "http://infinigag.k3min.eu/funny/hot",
                       success: function(result6) {
                         console.log(result6);
                         console.log(result6.data[0].images.normal);
@@ -78,20 +56,10 @@ $.ajax({
                         {
                           imagelist.push(result6.data[i].images.normal);
                         }
+                        imagelist.reverse();
                       }
                     });
-          $.ajax({
-                              url: "http://infinigag.k3min.eu/funny/hot",
-                              success: function(result7) {
-                                console.log(result7);
-                                console.log(result7.data[0].images.normal);
-                                for(i=0;i < result7.data.length; i++)
-                                {
-                                  imagelist.push(result7.data[i].images.normal);
-                                }
-                                imagelist.reverse();
-                              }
-                            });
+          
           
 }
 
