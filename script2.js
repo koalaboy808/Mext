@@ -4,6 +4,31 @@ var j = 0;
 function callAPI(){
 console.log("hello");
 $.ajax({
+      url: "http://infinigag.k3min.eu/trending",
+      success: function(result2) {
+        console.log(result2);
+        console.log(result2.data[0].images.normal);
+        for(i=0;i < result2.data.length; i++)
+        {
+          imagelist.push(result2.data[i].images.normal);
+        }
+        
+      }
+    });
+  $.ajax({
+        url: "http://infinigag.k3min.eu/meme/fresh",
+        success: function(result3) {
+          console.log(result3);
+          console.log(result3.data[0].images.normal);
+          for(i=0;i < result3.data.length; i++)
+          {
+            imagelist.push(result3.data[i].images.normal);
+          }
+          
+        }
+      });
+
+$.ajax({
     url: "http://infinigag.k3min.eu/meme/hot",
 
     success: function(result) {
@@ -64,32 +89,10 @@ $.ajax({
                                 {
                                   imagelist.push(result7.data[i].images.normal);
                                 }
+                                imagelist.reverse();
                               }
                             });
-          $.ajax({
-      url: "http://infinigag.k3min.eu/trending",
-      success: function(result2) {
-        console.log(result2);
-        console.log(result2.data[0].images.normal);
-        for(i=0;i < result2.data.length; i++)
-        {
-          imagelist.push(result2.data[i].images.normal);
-        }
-      }
-    });
-  $.ajax({
-        url: "http://infinigag.k3min.eu/meme/fresh",
-        success: function(result3) {
-          console.log(result3);
-          console.log(result3.data[0].images.normal);
-          for(i=0;i < result3.data.length; i++)
-          {
-            imagelist.push(result3.data[i].images.normal);
-          }
-          imagelist.reverse();
-        }
-      });
-
+          
 }
 
 counter = function() {
