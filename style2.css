@@ -114,7 +114,7 @@ textarea {
 	width: 100%;
 }
 
-h3, h1 {
+h3, h1, h4 {
 	font-family: Proxima Nova, sans-serif;
 	font-weight: bold;
 	margin: .25em;
@@ -128,8 +128,27 @@ span, p {
 
 p {	
 
-	padding: 0px;
-	margin: 0px;
+	/*padding: 0px;*/
+	margin: .25em;
+}
+
+.circle-photos {
+	height: 12em;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+
+.text-inline {
+	display: inline;
+}
+
+a {
+	color: black;
+}
+a:hover {
+	color: #BD4932;
 }
 
 
